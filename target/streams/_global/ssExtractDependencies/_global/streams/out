@@ -1,8 +1,8 @@
-[error] sbt.librarymanagement.ResolveException: Error downloading com.typesafe:config:1.4.3
+[error] sbt.librarymanagement.ResolveException: Error downloading org.apache.spark:spark-sql-kafka_2.13:3.5.1
 [error]   Not found
 [error]   Not found
-[error]   not found: /home/phinguyen/.ivy2/localcom.typesafe/config/1.4.3/ivys/ivy.xml
-[error]   download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.3/config-1.4.3.pom
+[error]   not found: C:\Users\nguye\.ivy2\localorg.apache.spark\spark-sql-kafka_2.13\3.5.1\ivys\ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka_2.13/3.5.1/spark-sql-kafka_2.13-3.5.1.pom
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:344)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:313)
 [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
@@ -33,8 +33,8 @@
 [error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 [error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 [error] 	at java.lang.Thread.run(Thread.java:750)
-[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading com.typesafe:config:1.4.3
+[error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading org.apache.spark:spark-sql-kafka_2.13:3.5.1
 [error]   Not found
 [error]   Not found
-[error]   not found: /home/phinguyen/.ivy2/localcom.typesafe/config/1.4.3/ivys/ivy.xml
-[error]   download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.3/config-1.4.3.pom
+[error]   not found: C:\Users\nguye\.ivy2\localorg.apache.spark\spark-sql-kafka_2.13\3.5.1\ivys\ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka_2.13/3.5.1/spark-sql-kafka_2.13-3.5.1.pom
