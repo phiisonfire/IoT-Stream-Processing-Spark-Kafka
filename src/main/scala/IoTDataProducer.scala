@@ -43,8 +43,8 @@ object IoTDataProducer {
     val eventTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format(new Date())
 
     s"""{
-       |  "device_id": "$deviceId"
-       |  "sensor_freq": $sensorFreq
+       |  "device_id": "$deviceId",
+       |  "sensor_freq": $sensorFreq,
        |  "event_time": "$eventTime"
        |}""".stripMargin
   }

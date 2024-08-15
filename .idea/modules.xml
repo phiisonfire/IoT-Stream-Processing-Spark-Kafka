@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/KafkaWithScala.iml" filepath="$PROJECT_DIR$/.idea/modules/KafkaWithScala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KafkaWithScala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/KafkaWithScala-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/KafkaWithScala.KafkaWithScala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/KafkaWithScala.KafkaWithScala-build.iml" />
     </modules>
   </component>
