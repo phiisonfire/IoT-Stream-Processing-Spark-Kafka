@@ -47,13 +47,20 @@ object SparkStructuredStreaming {
 
       val sensorEventsList: List[sensorEvent] = state.get.sensorEvents
 
+      // with filter shorthand syntax & pattern matching
       val anomalousEvents = sensorEventsList.filter(_.sensor_freq <= 0).map{
         case sensorEvent(dev, freq, event_time, time_window) => sensorEventsFiltered(dev, freq, event_time, isAnomalous = 1)
       }
-      val nonAnomalousEvents = sensorEventsList.filter(_.sensor_freq > 0).map {
-        case sensorEvent(dev, freq, event_time, time_window) => sensorEventsFiltered(dev, freq, event_time, isAnomalous = 1)
+      // without filter shorthand syntax & pattern matching
+      val nonAnomalousEvents = sensorEventsList.filter(event => event.sensor_freq > 0).map { event =>
+        new sensorEventsFiltered(event.device_id, event.sensor_freq, event.event_time, isAnomalous = 0)
       }
-      val sortedEvents = (anomalousEvents:::nonAnomalousEvents.sortWith((a,b) => a.event_time.before(b.event_time))).toArray
+      /// ::: concatenate 2 list
+      // (a,b) => a.event_time.before(b.event_time) custom comparison function for .sortWith
+      val sortedEvents = (anomalousEvents ::: nonAnomalousEvents.sortWith((a,b) => a.event_time.before(b.event_time))).toArray
+
+      // :: is the list construction operator, which prepend to a list
+      // Nil is an empty List
       val finalEvents = (sortedEvents.head :: sortedEvents(sortedEvents.size/2) :: sortedEvents.last :: Nil).toSet ++ anomalousEvents.toSet
 
       state.remove()
